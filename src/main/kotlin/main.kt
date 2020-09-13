@@ -40,6 +40,7 @@ class DescriptiveRBuilder<p : RProps>(func: DescriptiveFunctionalComponent<p>) :
 
     init {
         component = functionalComponent {
+            //TODO: support more than 1 state getter/setter
             val (stateDescriptionTooltip, setStateDescriptionTooltip) = react.useState<String?>(null)
             this@DescriptiveRBuilder.stateDescriptionTooltip = stateDescriptionTooltip
             this@DescriptiveRBuilder.setStateDescriptionTooltip = setStateDescriptionTooltip
