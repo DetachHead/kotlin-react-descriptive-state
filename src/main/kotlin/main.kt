@@ -8,7 +8,7 @@ import react.dom.span
  * ```kotlin
  *val foo = descriptiveFunctionalComponent<RProps> {
  *val (isEnabled, setIsEnabled) = useState(true, "the button is enabled by defualt")
- *return@descriptiveFunctionalComponent functionalComponent<RProps> {
+ *return@descriptiveFunctionalComponent functionalComponent<RProps> { //TODO: less gross
  *      button {
  *          attrs {
  *              disabled = !isEnabled
