@@ -21,7 +21,7 @@ import react.dom.span
  *  }
  *}
  * ```
- * */
+ */
 typealias DescriptiveFunctionalComponent<p> = DescriptiveRBuilder<p>.(props: p) -> FunctionalComponent<p>
 
 /**
