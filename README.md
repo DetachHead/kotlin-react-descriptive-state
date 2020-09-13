@@ -24,6 +24,6 @@ val foo = descriptiveFunctionalComponent<RProps> {
     }
 }
 ```
-
+![](images/egg.png)
 ## disclaimer
 this project is just a POC for an idea i had to improve user experience in GUIs. it hasnt been tested much and i dont know how well it'll scale with an actual project
