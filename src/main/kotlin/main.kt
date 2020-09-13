@@ -2,7 +2,26 @@ import kotlinx.html.*
 import react.*
 import react.dom.span
 
-/** a [FunctionalComponent] that uses [DescriptiveRBuilder.useState] */
+/**
+ * a [FunctionalComponent] that uses [DescriptiveRBuilder.useState]
+ * eg.
+ * ```kotlin
+ *val foo = descriptiveFunctionalComponent<RProps> {
+ *val (isEnabled, setIsEnabled) = useState(true, "the button is enabled by defualt")
+ *return@descriptiveFunctionalComponent functionalComponent<RProps> {
+ *      button {
+ *          attrs {
+ *              disabled = !isEnabled
+ *              onClickFunction = {
+ *                  setIsEnabled(false, "you disabled the button")
+ *              }
+ *          }
+ *          +"disable button"
+ *      }
+ *  }
+ *}
+ * ```
+ * */
 typealias DescriptiveFunctionalComponent<p> = DescriptiveRBuilder<p>.(props: p) -> FunctionalComponent<p>
 
 /**
